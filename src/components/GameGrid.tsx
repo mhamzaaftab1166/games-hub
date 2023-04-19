@@ -18,13 +18,13 @@ const GameGrid = () => {
           skelton.map((skelton) => (
             <GameCardContainer key={skelton}>
               {" "}
-              <GameCardSkelton></GameCardSkelton>
+              <GameCardSkelton key={skelton}></GameCardSkelton>
             </GameCardContainer>
           ))}
         {games.map((game) => (
           <GameCardContainer key={game.id}>
             {" "}
-            <GameCard game={game}></GameCard>
+            <GameCard key={game.id} game={game}></GameCard>
           </GameCardContainer>
         ))}
       </SimpleGrid>
