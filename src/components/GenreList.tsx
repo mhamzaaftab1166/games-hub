@@ -16,9 +16,9 @@ interface Props {
 }
 const GenreList = ({ onSelectedGenre, selectedGenre }: Props) => {
   const { data: genres, error, isLoading } = useGenre();
+  if (error) return null;
   return (
     <>
-      {error && null}
       <Box paddingX="50%"> {isLoading && <Spinner></Spinner>}</Box>
       <List>
         {genres.map((genre) => (
