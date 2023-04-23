@@ -13,7 +13,11 @@ export interface GameQuery {
   sortOrder: string;
 }
 function App() {
-  const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
+  const [gameQuery, setGameQuery] = useState<GameQuery>({
+    genre: null,
+    platform: null,
+    sortOrder: "",
+  } as GameQuery);
   return (
     <Grid
       templateAreas={{
