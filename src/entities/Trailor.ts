@@ -1,4 +1,4 @@
-export interface Trailor {
+export default interface Trailor {
   id: number;
   name: string;
   preview: string;

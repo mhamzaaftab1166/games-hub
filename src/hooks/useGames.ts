@@ -4,7 +4,7 @@ import ApiClient from "../services/api-client";
 const apiClient = new ApiClient<Game>("/games");
 import ms from "ms";
 import useGameQueryStore from "../store";
-import { Game } from "../entities/Game";
+import Game from "../entities/Game";
 const Games = () => {
   const gameQuery = useGameQueryStore((s) => s.gameQuery);
   return useInfiniteQuery<FetchResponse<Game>, Error>({
